@@ -25,27 +25,6 @@ import {
 import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
-  // const searchInput = (
-  //   <Input
-  //     aria-label="Search"
-  //     classNames={{
-  //       inputWrapper: "bg-default-100",
-  //       input: "text-sm",
-  //     }}
-  //     endContent={
-  //       <Kbd className="hidden lg:inline-block" keys={["command"]}>
-  //         K
-  //       </Kbd>
-  //     }
-  //     labelPlacement="outside"
-  //     placeholder="Search..."
-  //     startContent={
-  //       <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-  //     }
-  //     type="search"
-  //   />
-  // );
-
   const pathname = usePathname();
 
   return (
@@ -64,12 +43,12 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
                   pathname === item.href
-                    ? "text-primary font-bold"
-                    : "text-foreground"
+                    ? "text-primary hover:text-accent"
+                    : "text-foreground",
+                  "hover:text-default-600" // Add hover effect
                 )}
-                //color="foreground"
+                // color="foreground"
                 href={item.href}
               >
                 {item.label}

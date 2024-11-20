@@ -13,6 +13,15 @@ module.exports = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      colors: {
+        // primary: "#1c1c22",
+        // accent: "#00e187",
+        primary: "#2BE6A7",
+
+        secondary: "#0891b2",
+
+        accent: "#0d9488",
+      },
     },
   },
   darkMode: "class",
