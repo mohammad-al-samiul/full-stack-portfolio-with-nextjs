@@ -1,6 +1,6 @@
-import Image from "next/image";
-import myPhoto from "@/src/assets/photo.png";
 import Container from "../Container";
+import BannerMotion from "./BannerMotion";
+
 export default function Banner() {
   return (
     <Container>
@@ -17,20 +17,14 @@ export default function Banner() {
             <p className="mt-8 md:mt-12">
               <button
                 type="button"
-                className="
-        py-4 px-12
-        
-        bg-teal-500
-        hover:bg-teal-600
-        rounded
-        text-white"
+                className="py-4 px-12 bg-accent hover:bg-teal-700 rounded text-white"
               >
                 Get Started
               </button>
             </p>
           </div>
-          <div className="">
-            <Image width={400} src={myPhoto} alt="my-photo" />
+          <div>
+            <BannerMotion />
           </div>
         </div>
       </div>
