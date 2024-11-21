@@ -10,7 +10,6 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
 
-import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
 
@@ -44,7 +43,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   pathname === item.href
-                    ? "text-primary hover:text-accent"
+                    ? "text-accent hover:text-primary"
                     : "text-foreground",
                   "hover:text-default-600" // Add hover effect
                 )}

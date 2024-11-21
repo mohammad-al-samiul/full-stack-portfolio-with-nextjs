@@ -9,6 +9,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        blob: "blob 3s linear infinite",
+      },
+      keyframes: {
+        blob: {
+          "0%, 100%": { transform: "translate(-50%, -50%) scale(1)" },
+          "50%": { transform: "translate(-54%, -46%) scale(1.1)" },
+        },
+      },
       fontFamily: {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
