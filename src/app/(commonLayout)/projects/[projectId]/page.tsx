@@ -1,3 +1,4 @@
+import DetailsCard from "@/src/components/UI/DetailsCard";
 import React from "react";
 
 interface IProps {
@@ -8,5 +9,9 @@ interface IProps {
 
 export default function ProjectDetails({ params }: IProps) {
   const { projectId } = params;
-  return <div>Project Details {projectId}</div>;
+  return (
+    <div>
+      <DetailsCard />
+    </div>
+  );
 }
