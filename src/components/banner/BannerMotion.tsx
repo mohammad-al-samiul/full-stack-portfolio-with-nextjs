@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import myPhoto from "@/src/assets/photo.png";
+import myPhoto from "../../../public/favicon.ico";
 import { motion } from "motion/react";
 
 export default function BannerMotion() {

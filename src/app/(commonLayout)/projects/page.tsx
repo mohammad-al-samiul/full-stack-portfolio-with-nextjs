@@ -29,7 +29,7 @@ export default async function Projects() {
         <h2 className="text-3xl lg:text-5xl font-bold text-center text-accent">
           Projects
         </h2>
-        <div className="w-full flex  gap-12 justify-center items-center mt-8 lg:mt-8">
+        <div className="w-full lg:flex  gap-12 justify-center items-center mt-8 lg:mt-8">
           {projects.map((project: any) => (
             <Card project={project} key={project._id} />
           ))}

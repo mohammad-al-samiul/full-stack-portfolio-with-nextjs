@@ -9,8 +9,8 @@ import { Providers } from "../lib/Providers";
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: "my-portfolio",
+    template: ``,
   },
   description: siteConfig.description,
   icons: {

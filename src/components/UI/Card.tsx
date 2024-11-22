@@ -4,7 +4,7 @@ import { Image } from "@nextui-org/image";
 
 export default function Card({ project }: { project: any }) {
   return (
-    <div className="h-[420px] max-w-sm border border-gray-200 rounded-lg shadow  dark:border-gray-800">
+    <div className="h-[420px] lg:max-w-sm border border-gray-200 rounded-lg shadow  dark:border-gray-800">
       <NextLink href={`projects/${project._id}`}>
         <Image
           className="rounded"

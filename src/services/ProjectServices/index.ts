@@ -9,14 +9,17 @@ const fetchOption = {
   },
 };
 export const getProjects = async () => {
-  const res = await fetch(`http://localhost:5000/api/projects`, fetchOption);
+  const res = await fetch(
+    `https://portfolio-api-nine-rose.vercel.app/api/projects`,
+    fetchOption
+  );
 
   return res.json();
 };
 
 export const getOneProjects = async (id: string) => {
   const res = await fetch(
-    `http://localhost:5000/api/projects/${id}`,
+    `https://portfolio-api-nine-rose.vercel.app/api/projects/${id}`,
     fetchOption
   );
 

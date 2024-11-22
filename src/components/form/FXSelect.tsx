@@ -1,7 +1,7 @@
-import { Select, SelectItem } from "@nextui-org/react";
 import { useFormContext } from "react-hook-form";
 
 import { IProps } from "./FXInput";
+import { Select, SelectItem } from "@nextui-org/react";
 
 interface ISelectProps extends IProps {
   options: {

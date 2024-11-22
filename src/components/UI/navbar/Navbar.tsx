@@ -22,8 +22,13 @@ import {
   Logo,
 } from "@/src/components/icons";
 import { usePathname } from "next/navigation";
+import { Button } from "@nextui-org/button";
+import NavbarDropdown from "./NavbarDropdown";
+import { useUser } from "@/src/context/user.provider";
 
 export const Navbar = () => {
+  const { user } = useUser();
+
   const pathname = usePathname();
 
   return (
@@ -31,8 +36,9 @@ export const Navbar = () => {
       <NavbarContent>
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <span className="text-2xl font-bold text-teal-500 uppercase">
+              Al Samiul
+            </span>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -62,15 +68,6 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
-            <TwitterIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Discord" href={siteConfig.links.discord}>
-            <DiscordIcon className="text-default-500" />
-          </Link>
-          <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
-          </Link>
           <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
@@ -81,6 +78,27 @@ export const Navbar = () => {
         </Link>
         <ThemeSwitch />
         <NavbarMenuToggle />
+      </NavbarContent>
+      <NavbarContent>
+        {user?.email ? (
+          <>
+            <NavbarItem className="hidden sm:flex gap-2">
+              <NavbarDropdown />
+            </NavbarItem>
+          </>
+        ) : (
+          <>
+            <NavbarItem>
+              <Button
+                className="bg-accent text-white"
+                as={NextLink}
+                href="/login"
+              >
+                Login
+              </Button>
+            </NavbarItem>
+          </>
+        )}
       </NavbarContent>
 
       <NavbarMenu>

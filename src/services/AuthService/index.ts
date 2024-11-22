@@ -15,33 +15,12 @@ interface AuthResponse {
   message?: string;
 }
 
-export const registerUser = async (userData: FieldValues) => {
-  try {
-    const { data } = await axiosInstance.post<AuthResponse>(
-      "/auth/register",
-      userData
-    );
-
-    if (!data.success && !data.data) {
-      throw new Error(data.message);
-    }
-
-    return data;
-  } catch (error: any) {
-    throw new Error(error);
-  }
-};
-
 export const loginUser = async (userData: FieldValues) => {
   try {
     const { data } = await axiosInstance.post<AuthResponse>(
       "/auth/login",
       userData
     );
-
-    if (!data.success && !data.data) {
-      throw new Error(data.message);
-    }
 
     if (data.success && data.data) {
       cookies().set("accessToken", data?.data?.accessToken);
@@ -70,13 +49,9 @@ export const getCurrentUser = async () => {
     //console.log("decode", decodedToken);
 
     return {
-      _id: decodedToken._id,
-      name: decodedToken.name,
       email: decodedToken.email,
-      mobileNumber: decodedToken.mobileNumber,
       role: decodedToken.role,
-      status: decodedToken.status,
-      profilePhoto: decodedToken.profilePhoto,
+      image: decodedToken.image,
     };
   }
 
