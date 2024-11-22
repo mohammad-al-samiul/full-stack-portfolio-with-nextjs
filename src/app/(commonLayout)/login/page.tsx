@@ -1,6 +1,7 @@
 "use client";
+
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
@@ -12,12 +13,14 @@ import { useUserLogin } from "@/src/hooks/auth.hook";
 import loginValidationSchema from "@/src/schemas/login.schema";
 import FXInput from "@/src/components/form/FXInput";
 
-export default function Login() {
+// Ensure the page is dynamically rendered
+export const dynamic = "force-dynamic";
+
+function LoginContent() {
   const { setIsLoading: userLoading } = useUser();
   const searchParams = useSearchParams();
   const router = useRouter();
   const redirect = searchParams.get("redirect");
-  // console.log(redirect);
 
   const { mutate: handleUserLogin, isPending, isSuccess } = useUserLogin();
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
@@ -43,12 +46,6 @@ export default function Login() {
         <p className="mb-4">Welcome Back! Let&lsquo;s Get Started</p>
         <div className="w-[35%]">
           <FXForm
-            defaultValues={
-              {
-                // email: "alsamiul123@gmail.com",
-                // password: "123456",
-              }
-            }
             resolver={zodResolver(loginValidationSchema)}
             onSubmit={onSubmit}
           >
@@ -70,5 +67,13 @@ export default function Login() {
         </div>
       </div>
     </>
+  );
+}
+
+export default function Login() {
+  return (
+    <Suspense fallback={<Loading />}>
+      <LoginContent />
+    </Suspense>
   );
 }
