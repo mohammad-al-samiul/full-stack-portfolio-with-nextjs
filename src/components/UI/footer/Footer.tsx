@@ -1,6 +1,7 @@
 import NextLink from "next/link";
 import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
 import Container from "../../Container";
+import { siteConfig } from "@/src/config/site";
 
 export default function Footer() {
   return (
@@ -27,36 +28,16 @@ export default function Footer() {
           </div>
           <div className="flex flex-col">
             <div className=" flex mt-4 lg:mt-24  flex-row justify-around lg:justify-between">
-              <NextLink
-                href="/"
-                className="hidden md:block cursor-pointer font-bold  font-stylish-one uppercase text-xl"
-              >
-                Al Samiul
-              </NextLink>
-              <NextLink
-                href="/about"
-                className=" md:block cursor-pointer  uppercase"
-              >
-                About
-              </NextLink>
-              <NextLink
-                href="/skills"
-                className=" md:block cursor-pointer   uppercase"
-              >
-                Skill
-              </NextLink>
-              <NextLink
-                href="/projects"
-                className=" md:block cursor-pointer uppercase"
-              >
-                Project
-              </NextLink>
-              <NextLink
-                href="/contact"
-                className=" md:block cursor-pointer uppercase"
-              >
-                Contact
-              </NextLink>
+              {siteConfig.navItems.map((item: any) => (
+                <div key={item.label}>
+                  <NextLink
+                    href={item.href}
+                    className="hidden text-foreground hover:text-default-600 md:block cursor-pointer font-bold  font-stylish-one uppercase text-xl"
+                  >
+                    {item.label}
+                  </NextLink>
+                </div>
+              ))}
             </div>
             <div className=" flex gap-4 justify-center lg:items-start mt-4 lg:mt-6">
               <a

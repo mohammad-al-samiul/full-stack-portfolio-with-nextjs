@@ -5,8 +5,14 @@ import { Image } from "@nextui-org/image";
 export default function Card({ project }: { project: any }) {
   return (
     <div className="h-[420px] max-w-sm border border-gray-200 rounded-lg shadow  dark:border-gray-800">
-      <NextLink href={`projects/${project.id}`}>
-        <Image width={500} src={project.imageUrl} alt={project.title} />
+      <NextLink href={`projects/${project._id}`}>
+        <Image
+          className="rounded"
+          width={500}
+          height={220}
+          src={project.imageUrl}
+          alt={project.title}
+        />
       </NextLink>
       <div className="p-5">
         <a href="#">
@@ -16,7 +22,7 @@ export default function Card({ project }: { project: any }) {
         </a>
         <p className="mb-3 font-normal text-default-">{project.description}</p>
         <NextLink
-          href={`projects/${project.id}`}
+          href={`projects/${project._id}`}
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-teal-500 rounded-lg hover:bg-teal-600 "
         >
           View Project

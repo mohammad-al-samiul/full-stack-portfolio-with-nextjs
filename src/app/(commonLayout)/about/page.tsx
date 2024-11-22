@@ -27,20 +27,24 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="lg:flex justify-between lg:mt-10 ">
-            <div className="flex lg:grid ">
-              <p>Name:</p>
-              <h3 className="font-bold">Al Samiul</h3>
+            <div className="flex lg:flex ">
+              <p className="me-2">Name: </p>
+              <h3 className="font-bold"> Al Samiul</h3>
             </div>
-            <div className="flex lg:grid ">
-              <p>Email:</p>
+            <div className="flex lg:flex ">
+              <p className="me-2">Email:</p>
               <h3 className="font-bold ">samiulwebprogrammer@gmail.com</h3>
             </div>
-            <div className="flex lg:grid lg:w-[120px] ">
-              <p>Date of Birth:</p>
+            <div className="flex lg:flex ">
+              <p className="me-2">Phone:</p>
+              <h3 className="font-bold ">+8801832997080</h3>
+            </div>
+            <div className="flex lg:flex ">
+              <p className="me-2">Date of Birth:</p>
               <h3 className="font-bold">30 january 2002</h3>
             </div>
-            <div className="flex lg:grid lg:w-[100px] ">
-              <p>From:</p>
+            <div className="flex lg:flex ">
+              <p className="me-2">From:</p>
               <h3 className="font-bold">Chittagong, Bangladesh</h3>
             </div>
           </div>

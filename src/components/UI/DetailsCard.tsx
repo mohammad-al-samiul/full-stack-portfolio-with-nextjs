@@ -1,16 +1,16 @@
-import { Link } from "@nextui-org/link";
-import NextLink from "next/link";
+"use client";
+
 import React from "react";
 
 export default function DetailsCard({ project }: { project: any }) {
   return (
     <div
-      key={project.id}
+      key={project._id}
       className="relative bg-cover bg-no-repeat w-full sm:w-4/5 lg:w-3/4 min-h-[350px] sm:min-h-[500px] lg:min-h-[600px] shadow-[0px_0px_40px_#1f1f1f] group"
       style={{
         backgroundImage: `url(${project.imageUrl})`,
-        backgroundPosition: "center",
-        backgroundSize: "cover", // Ensures the image covers the whole div
+        // backgroundPosition: "",
+        backgroundSize: "fill", // Ensures the image covers the whole div
       }}
     >
       <div className="absolute inset-0 bg-[#1f1f1f9a]"></div>
@@ -18,8 +18,8 @@ export default function DetailsCard({ project }: { project: any }) {
       <div className="absolute text-white text-[80px] sm:text-[100px] font-bold hidden group-hover:block right-[-10px] top-[-40px]">
         {project.id}
       </div>
-      <div className="absolute flex flex-col gap-5 text-white bottom-[23%] left-[8%] z-20 transform group-hover:scale-110 transition-transform duration-400 lg:w-1/2 sm:w-3/4 md:w-2/3">
-        <h1 className="text-lg lg:text-4xl font-bold text-center lg:text-start lg:mb-3">
+      <div className="absolute flex flex-col gap-5 text-white bottom-[15%] left-[8%] z-20 transform group-hover:scale-110 transition-transform duration-400 lg:w-1/2 sm:w-3/4 md:w-2/3">
+        <h1 className="text-lg lg:text-4xl font-bold  lg:text-start lg:mb-3">
           {project.title}
         </h1>
         <p className="text-sm lg:text-lg">{project.description}</p>
@@ -33,14 +33,20 @@ export default function DetailsCard({ project }: { project: any }) {
             </span>
           ))}
         </div>
+
+        {/* Added Features List */}
+        <div className="mt-4 hidden lg:block">
+          <h2 className="text-md font-bold">Features:</h2>
+          <ul className="list-disc pl-5 text-sm lg:text-lg">
+            {project.features?.map((feature: string, index: number) => (
+              <li key={index} className="text-white">
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="mt-4 flex gap-4 flex-wrap">
-          <Link
-            as={NextLink}
-            href={`projects/${project.id}`}
-            className="bg-teal-500 text-white px-4 py-2 rounded hover:bg-teal-600"
-          >
-            Read More
-          </Link>
           <a
             href={project.github}
             target="_blank"

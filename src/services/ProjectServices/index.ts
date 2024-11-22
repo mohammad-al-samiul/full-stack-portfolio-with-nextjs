@@ -14,6 +14,15 @@ export const getProjects = async () => {
   return res.json();
 };
 
+export const getOneProjects = async (id: string) => {
+  const res = await fetch(
+    `http://localhost:5000/api/projects/${id}`,
+    fetchOption
+  );
+
+  return res.json();
+};
+
 export const createProduct = async (projectData: FormData) => {
   try {
     const { data } = await axiosInstance.post("/projects", projectData, {
