@@ -1,8 +1,6 @@
-"use client";
 import Container from "../Container";
 import BannerMotion from "./BannerMotion";
 import DesignationAnimation from "./DesignationAnimation";
-import { motion } from "motion/react";
 
 export default function Banner() {
   return (

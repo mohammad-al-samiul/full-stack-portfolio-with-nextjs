@@ -10,12 +10,11 @@ export default function BannerMotion() {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        //animate={{ y: -20 }}
         transition={{ duration: 0.5, delay: 0.7, ease: "easeIn" }}
-        className="absolute inset-0 w-full h-full mix-blend-lighten"
+        className="absolute inset-0 w-full h-full rounded-full overflow-hidden"
       >
         <Image
-          className="w-full h-full object-cover rounded-full"
+          className="w-full h-full object-cover"
           src={myPhoto}
           alt="my-photo"
         />

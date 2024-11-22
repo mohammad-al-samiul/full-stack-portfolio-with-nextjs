@@ -43,7 +43,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   pathname === item.href
-                    ? "text-accent hover:text-primary"
+                    ? "text-accent hover:text-primary font-bold"
                     : "text-foreground",
                   "hover:text-default-600" // Add hover effect
                 )}

@@ -4,19 +4,17 @@ import { Image } from "@nextui-org/image";
 
 export default function Card({ project }: { project: any }) {
   return (
-    <div className="h-[420px] max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="h-[420px] max-w-sm border border-gray-200 rounded-lg shadow  dark:border-gray-800">
       <NextLink href={`projects/${project.id}`}>
         <Image width={500} src={project.imageUrl} alt={project.title} />
       </NextLink>
       <div className="p-5">
         <a href="#">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-default-800 ">
             {project.title}
           </h5>
         </a>
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          {project.description}
-        </p>
+        <p className="mb-3 font-normal text-default-">{project.description}</p>
         <NextLink
           href={`projects/${project.id}`}
           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-teal-500 rounded-lg hover:bg-teal-600 "
