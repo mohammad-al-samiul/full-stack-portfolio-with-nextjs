@@ -1,22 +1,23 @@
 "use client";
 import Image from "next/image";
-import myPhoto from "../../../public/favicon.ico";
 import { motion } from "motion/react";
+
+import myPhoto from "../../../public/favicon.ico";
 
 export default function BannerMotion() {
   return (
     <div className="relative w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]">
       {/* Photo */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.7, ease: "easeIn" }}
         className="absolute inset-0 w-full h-full rounded-full overflow-hidden"
+        initial={{ opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.7, ease: "easeIn" }}
+        whileInView={{ opacity: 1 }}
       >
         <Image
+          alt="my-photo"
           className="w-full h-full object-cover"
           src={myPhoto}
-          alt="my-photo"
         />
       </motion.div>
 
@@ -28,18 +29,18 @@ export default function BannerMotion() {
         xmlns="http://www.w3.org/2000/svg"
       >
         <motion.circle
-          cx="253"
-          cy="253"
-          r="250"
-          stroke="#0d9488"
-          strokeWidth="4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          initial={{ strokeDasharray: "24 10 0 0" }}
           animate={{
             strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
             rotate: [120, 360],
           }}
+          cx="253"
+          cy="253"
+          initial={{ strokeDasharray: "24 10 0 0" }}
+          r="250"
+          stroke="#0d9488"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="4"
           transition={{
             duration: 20,
             repeat: Infinity,

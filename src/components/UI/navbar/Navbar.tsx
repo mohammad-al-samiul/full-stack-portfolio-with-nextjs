@@ -9,21 +9,16 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/link";
-
 import NextLink from "next/link";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
+import { Button } from "@nextui-org/button";
+
+import NavbarDropdown from "./NavbarDropdown";
 
 import { siteConfig } from "@/src/config/site";
 import { ThemeSwitch } from "@/src/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  Logo,
-} from "@/src/components/icons";
-import { usePathname } from "next/navigation";
-import { Button } from "@nextui-org/button";
-import NavbarDropdown from "./NavbarDropdown";
+import { GithubIcon } from "@/src/components/icons";
 import { useUser } from "@/src/context/user.provider";
 
 export const Navbar = () => {
@@ -51,7 +46,7 @@ export const Navbar = () => {
                   pathname === item.href
                     ? "text-accent hover:text-primary font-bold"
                     : "text-foreground",
-                  "hover:text-default-600" // Add hover effect
+                  "hover:text-default-600", // Add hover effect
                 )}
                 // color="foreground"
                 href={item.href}
@@ -90,8 +85,8 @@ export const Navbar = () => {
           <>
             <NavbarItem>
               <Button
-                className="bg-accent text-white"
                 as={NextLink}
+                className="bg-accent text-white"
                 href="/login"
               >
                 Login

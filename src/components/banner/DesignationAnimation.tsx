@@ -23,11 +23,11 @@ export default function DesignationAnimation() {
   return (
     <div className={`text-4xl ${textColor}`} style={{ fontSize: "46px" }}>
       <TypeAnimation
+        cursor={true}
+        repeat={Infinity}
         sequence={sequence}
         speed={50}
-        repeat={Infinity}
         wrapper="span"
-        cursor={true}
       />
     </div>
   );

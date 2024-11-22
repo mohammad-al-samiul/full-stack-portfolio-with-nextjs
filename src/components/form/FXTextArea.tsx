@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Textarea } from "@nextui-org/input";
 import { useFormContext } from "react-hook-form";
+
 import { IProps } from "./FXInput";
 
 interface ITextAreaProps extends IProps {

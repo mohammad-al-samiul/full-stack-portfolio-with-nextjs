@@ -1,4 +1,3 @@
-import Container from "@/src/components/Container";
 import DetailsCard from "@/src/components/UI/DetailsCard";
 import { getOneProjects } from "@/src/services/ProjectServices";
 interface IProps {

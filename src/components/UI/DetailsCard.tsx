@@ -13,8 +13,8 @@ export default function DetailsCard({ project }: { project: any }) {
         backgroundSize: "fill", // Ensures the image covers the whole div
       }}
     >
-      <div className="absolute inset-0 bg-[#1f1f1f9a]"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#343d68] to-[#343d687c] scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100"></div>
+      <div className="absolute inset-0 bg-[#1f1f1f9a]" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#343d68] to-[#343d687c] scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100" />
       <div className="absolute text-white text-[80px] sm:text-[100px] font-bold hidden group-hover:block right-[-10px] top-[-40px]">
         {project.id}
       </div>
@@ -48,18 +48,18 @@ export default function DetailsCard({ project }: { project: any }) {
 
         <div className="mt-4 flex gap-4 flex-wrap">
           <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+            href={project.github}
+            rel="noopener noreferrer"
+            target="_blank"
           >
             GitHub
           </a>
           <a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
             className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            href={project.live}
+            rel="noopener noreferrer"
+            target="_blank"
           >
             Live Demo
           </a>

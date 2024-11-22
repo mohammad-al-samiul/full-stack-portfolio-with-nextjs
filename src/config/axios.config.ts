@@ -1,6 +1,7 @@
 import axios from "axios";
-import envConfig from "./envConfig";
 import { cookies } from "next/headers";
+
+import envConfig from "./envConfig";
 
 const axiosInstance = axios.create({
   baseURL: envConfig.baseApi,
@@ -19,7 +20,7 @@ axiosInstance.interceptors.request.use(
   },
   function (error) {
     return Promise.reject(error);
-  }
+  },
 );
 
 axiosInstance.interceptors.response.use(
@@ -28,7 +29,7 @@ axiosInstance.interceptors.response.use(
   },
   function (error) {
     return Promise.reject(error);
-  }
+  },
 );
 
 export default axiosInstance;

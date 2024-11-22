@@ -1,10 +1,8 @@
 import "@/src/styles/globals.css";
 import { Metadata } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
 
 import { siteConfig } from "../config/site";
-
 import { Providers } from "../lib/Providers";
 
 export const metadata: Metadata = {

@@ -1,17 +1,19 @@
 "use server";
 
-import axiosInstance from "@/src/config/axios.config";
 import { revalidateTag } from "next/cache";
+
+import axiosInstance from "@/src/config/axios.config";
 
 const fetchOption = {
   next: {
     tags: ["projects"],
   },
 };
+
 export const getProjects = async () => {
   const res = await fetch(
     `https://portfolio-api-nine-rose.vercel.app/api/projects`,
-    fetchOption
+    fetchOption,
   );
 
   return res.json();
@@ -20,7 +22,7 @@ export const getProjects = async () => {
 export const getOneProjects = async (id: string) => {
   const res = await fetch(
     `https://portfolio-api-nine-rose.vercel.app/api/projects/${id}`,
-    fetchOption
+    fetchOption,
   );
 
   return res.json();
@@ -35,6 +37,7 @@ export const createProduct = async (projectData: FormData) => {
     });
 
     revalidateTag("projects");
+
     return data;
   } catch (error: any) {
     throw new Error(error.message);

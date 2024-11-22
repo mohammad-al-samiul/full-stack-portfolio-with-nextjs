@@ -1,5 +1,7 @@
-import Container from "@/src/components/Container";
 import React from "react";
+import { Image } from "@nextui-org/image";
+
+import Container from "@/src/components/Container";
 
 type BlogPost = {
   id: number;
@@ -91,10 +93,10 @@ const BlogPostPage: React.FC = () => {
             {blogPost.title}
           </h1>
           <div className="flex items-center mt-4 space-x-4">
-            <img
-              src={blogPost.author.profilePicture}
+            <Image
               alt={blogPost.author.name}
               className="w-16 h-16 rounded-full"
+              src={blogPost.author.profilePicture}
             />
             <div>
               <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
@@ -119,10 +121,10 @@ const BlogPostPage: React.FC = () => {
             if (block.type === "image") {
               return (
                 <figure key={index} className="mb-6">
-                  <img
-                    src={block.src}
+                  <Image
                     alt={block.alt}
                     className="rounded-lg w-full"
+                    src={block.src}
                   />
                   <figcaption className="text-sm text-gray-500 mt-2">
                     {block.alt}
@@ -140,6 +142,7 @@ const BlogPostPage: React.FC = () => {
                 </blockquote>
               );
             }
+
             return null;
           })}
         </main>

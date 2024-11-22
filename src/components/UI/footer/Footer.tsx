@@ -1,6 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import NextLink from "next/link";
 import { FaFacebook, FaGithub, FaLinkedinIn } from "react-icons/fa";
+
 import Container from "../../Container";
+
 import { siteConfig } from "@/src/config/site";
 
 export default function Footer() {
@@ -19,8 +22,8 @@ export default function Footer() {
             </p>
             <div className="lg:w-[20%] w-full flex justify-center mt-3 lg:mt-0 lg:pt-0 ">
               <NextLink
-                href="/contact"
                 className="bg-accent justify-center text-center rounded-lg shadow px-10 py-3 flex items-center text-white"
+                href="/contact"
               >
                 Contact US
               </NextLink>
@@ -31,8 +34,8 @@ export default function Footer() {
               {siteConfig.navItems.map((item: any) => (
                 <div key={item.label}>
                   <NextLink
-                    href={item.href}
                     className="hidden text-foreground hover:text-default-600 md:block cursor-pointer font-bold  font-stylish-one uppercase text-xl"
+                    href={item.href}
                   >
                     {item.label}
                   </NextLink>
@@ -41,24 +44,24 @@ export default function Footer() {
             </div>
             <div className=" flex gap-4 justify-center lg:items-start mt-4 lg:mt-6">
               <a
-                target="_blank"
                 href="https://www.facebook.com/alsamiul1996"
                 rel="noreferrer"
+                target="_blank"
               >
                 <FaFacebook className="text-3xl hover:text-accent " />
               </a>
 
               <a
-                target="_blank"
                 href="https://github.com/mohammad-al-samiul"
                 rel="noreferrer"
+                target="_blank"
               >
                 <FaGithub className="text-3xl hover:text-accent transition-all duration-600" />
               </a>
               <a
-                target="_blank"
                 href="https://www.linkedin.com/in/al-samiul/"
                 rel="noreferrer"
+                target="_blank"
               >
                 <FaLinkedinIn className="text-3xl hover:text-accent transition-all duration-600" />
               </a>

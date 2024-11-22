@@ -14,69 +14,68 @@ import react from "@/src/assets/images/stack/React.png";
 import redux from "@/src/assets/images/stack/Redux.svg";
 import tailwind from "@/src/assets/images/stack/Tailwind.png";
 import typescript from "@/src/assets/images/stack/Typescript.svg";
-import vercel from "@/src/assets/images/stack/Vercel.svg";
 import git from "@/src/assets/images/stack/Git.svg";
-
 import blob from "@/src/assets/images/userAsset/blob vector.png";
 
 export default function TechStack() {
-  const projects = [
-    {
-      id: 1,
-      title: "Regal Dragon Restaurant",
-      description:
-        "An online food delivery and ordering platform designed to connect users with restaurants, allowing them to order food for delivery or pickup.",
-      techStack: [
-        html,
-        css,
-        javascript,
-        tailwind,
-        react,
-        nodejs,
-        express,
-        mongodb,
-      ],
-      github:
-        "https://github.com/mohammad-al-samiul/Regal-Dragon-Restaurant-Client",
-      live: "https://regal-dragon-restaurant.netlify.app/",
-    },
-    {
-      id: 2,
-      title: "Doctor's Portal",
-      description:
-        "A web platform tailored for dentists, offering features designed to manage dental services and appointments efficiently.",
-      techStack: [
-        html,
-        css,
-        javascript,
-        tailwind,
-        react,
-        nodejs,
-        express,
-        mongodb,
-      ],
-      github: "https://github.com/mohammad-al-samiul/doctor-portal-client",
-      live: "https://doctors-porta1.netlify.app/",
-    },
-    {
-      id: 3,
-      title: "Genius Car",
-      description:
-        "Explore a diverse range of services for vehicle maintenance, repairs, and upgrades to ensure the best for your car.",
-      techStack: [
-        html,
-        css,
-        javascript,
-        tailwind,
-        react,
-        nodejs,
-        express,
-        mongodb,
-      ],
-      github: "https://github.com/mohammad-al-samiul/genius-car-client",
-      live: "https://genius-car-react.netlify.app/",
-    },
-  ];
+  // const projects = [
+  //   {
+  //     id: 1,
+  //     title: "Regal Dragon Restaurant",
+  //     description:
+  //       "An online food delivery and ordering platform designed to connect users with restaurants, allowing them to order food for delivery or pickup.",
+  //     techStack: [
+  //       html,
+  //       css,
+  //       javascript,
+  //       tailwind,
+  //       react,
+  //       nodejs,
+  //       express,
+  //       mongodb,
+  //     ],
+  //     github:
+  //       "https://github.com/mohammad-al-samiul/Regal-Dragon-Restaurant-Client",
+  //     live: "https://regal-dragon-restaurant.netlify.app/",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Doctor's Portal",
+  //     description:
+  //       "A web platform tailored for dentists, offering features designed to manage dental services and appointments efficiently.",
+  //     techStack: [
+  //       html,
+  //       css,
+  //       javascript,
+  //       tailwind,
+  //       react,
+  //       nodejs,
+  //       express,
+  //       mongodb,
+  //     ],
+  //     github: "https://github.com/mohammad-al-samiul/doctor-portal-client",
+  //     live: "https://doctors-porta1.netlify.app/",
+  //   },
+  //   {
+  //     id: 3,
+  //     title: "Genius Car",
+  //     description:
+  //       "Explore a diverse range of services for vehicle maintenance, repairs, and upgrades to ensure the best for your car.",
+  //     techStack: [
+  //       html,
+  //       css,
+  //       javascript,
+  //       tailwind,
+  //       react,
+  //       nodejs,
+  //       express,
+  //       mongodb,
+  //     ],
+  //     github: "https://github.com/mohammad-al-samiul/genius-car-client",
+  //     live: "https://genius-car-react.netlify.app/",
+  //   },
+  // ];
+
   return (
     <div className="lg:flex lg:px-20 lg:py-20 mt-20 relative">
       <div className="lg:w-1/2 px-10">
@@ -101,112 +100,112 @@ export default function TechStack() {
       <div className="lg:w-1/2 relative mt-20 px-10 lg:mt-0 lg:px-0">
         <div className="grid grid-cols-5 gap-6 lg:px-10 relative">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-5] animate-blob">
-            <Image src={blob} alt="Blob" width={200} height={200} />
+            <Image alt="Blob" height={200} src={blob} width={200} />
           </div>
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={html}
             alt="HTML"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={html}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={css}
             alt="CSS"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={css}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={javascript}
             alt="JavaScript"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={javascript}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={react}
             alt="React"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={react}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={nodejs}
             alt="Node.js"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={nodejs}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={nextjs}
             alt="Next.js"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={nextjs}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={redux}
             alt="Redux"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={redux}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={tailwind}
             alt="Tailwind CSS"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={tailwind}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={bootstrap}
             alt="Bootstrap"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={bootstrap}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={bash}
             alt="Bash"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={bash}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={express}
             alt="Express"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={express}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={github}
             alt="Github"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={github}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={git}
             alt="Git"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={git}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={mongodb}
             alt="MongoDB"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={mongodb}
+            width={80}
           />
           <Image
-            className="w-20 transition-transform duration-500 hover:scale-125"
-            src={typescript}
             alt="Typescript"
-            width={80}
+            className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
+            src={typescript}
+            width={80}
           />
         </div>
       </div>

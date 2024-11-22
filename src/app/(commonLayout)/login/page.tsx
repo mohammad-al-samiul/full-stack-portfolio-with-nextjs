@@ -1,15 +1,16 @@
 "use client";
-import FXForm from "@/src/components/form/FXForm";
-import Loading from "@/src/components/Loading";
-import { useUser } from "@/src/context/user.provider";
-import { useUserLogin } from "@/src/hooks/auth.hook";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Button } from "@nextui-org/button";
+
+import FXForm from "@/src/components/form/FXForm";
+import Loading from "@/src/components/Loading";
+import { useUser } from "@/src/context/user.provider";
+import { useUserLogin } from "@/src/hooks/auth.hook";
 import loginValidationSchema from "@/src/schemas/login.schema";
 import FXInput from "@/src/components/form/FXInput";
-import { Button } from "@nextui-org/button";
 
 export default function Login() {
   const { setIsLoading: userLoading } = useUser();

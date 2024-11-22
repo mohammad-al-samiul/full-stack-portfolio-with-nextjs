@@ -1,10 +1,11 @@
 /* eslint-disable prettier/prettier */
 "use server";
 
-import axiosInstance from "@/src/config/axios.config";
 import { jwtDecode } from "jwt-decode";
 import { cookies } from "next/headers";
 import { FieldValues } from "react-hook-form";
+
+import axiosInstance from "@/src/config/axios.config";
 
 interface AuthResponse {
   success: boolean;

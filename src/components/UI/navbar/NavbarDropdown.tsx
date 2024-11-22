@@ -1,9 +1,5 @@
 "use client";
-import { useUser } from "@/src/context/user.provider";
-import { logout } from "@/src/services/AuthService";
 import { usePathname, useRouter } from "next/navigation";
-
-import { protectedRoutes } from "@/src/constant";
 import {
   Dropdown,
   DropdownItem,
@@ -12,9 +8,13 @@ import {
 } from "@nextui-org/dropdown";
 import { Avatar } from "@nextui-org/avatar";
 
+import { useUser } from "@/src/context/user.provider";
+import { logout } from "@/src/services/AuthService";
+import { protectedRoutes } from "@/src/constant";
+
 export default function NavbarDropdown() {
-  const { setIsLoading: userLoading, user } = useUser();
-  console.log(user);
+  const { setIsLoading: userLoading } = useUser();
+
   const router = useRouter();
   const pathname = usePathname();
   const handleNavigation = (pathName: string) => {
