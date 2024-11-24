@@ -46,6 +46,10 @@ function LoginContent() {
         <p className="mb-4">Welcome Back! Let&lsquo;s Get Started</p>
         <div className="w-[35%]">
           <FXForm
+            defaultValues={{
+              email: "alsamiul123@gmail.com",
+              password: "123456",
+            }}
             resolver={zodResolver(loginValidationSchema)}
             onSubmit={onSubmit}
           >

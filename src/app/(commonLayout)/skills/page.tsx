@@ -151,11 +151,12 @@ export default function TechStack() {
             src={redux}
             width={80}
           />
+
           <Image
-            alt="Tailwind CSS"
+            alt="Github"
             className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
-            src={tailwind}
+            src={github}
             width={80}
           />
           <Image
@@ -180,10 +181,10 @@ export default function TechStack() {
             width={80}
           />
           <Image
-            alt="Github"
+            alt="Tailwind CSS"
             className="w-20 transition-transform duration-500 hover:scale-125"
             height={80}
-            src={github}
+            src={tailwind}
             width={80}
           />
           <Image

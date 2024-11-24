@@ -1,0 +1,26 @@
+/* Default (Light Theme) */
+.jodit-container:not(.jodit_inline) .jodit-wysiwyg {
+  background-color: #ffffff; /* Light background */
+  color: #1a202c; /* Dark text */
+  margin: 0;
+  outline: 0;
+  overflow-x: auto;
+  padding: 8px;
+  position: relative;
+  border-radius: 0.5rem; /* Rounded corners */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease; /* Smooth theme switch */
+}
+
+/* Dark Theme */
+[data-theme="dark"] .jodit-container:not(.jodit_inline) .jodit-wysiwyg {
+  background-color: #1a202c; /* Dark background */
+  color: #e2e8f0; /* Light text */
+  margin: 0;
+  outline: 0;
+  overflow-x: auto;
+  padding: 8px;
+  position: relative;
+  border-radius: 0.5rem; /* Rounded corners */
+}
